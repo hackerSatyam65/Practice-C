@@ -1,18 +1,17 @@
 #include<stdio.h>
 
-int fact(int n){
-    if(n==0 || n==1){
-        return 1;
-    }
-    return n*fact(n-1);
+
+void add(int* x, int* y){
+     *x= *x +10;
+     *y= *y +10;
+     return;
+     
 }
 
-int add(int* x, int* y){
-    return fact(*x + *y);
-}
-
-int sum(int x, int y){
-    return fact(x + y);
+void sum(int x, int y){
+     x = x+10;
+     y = y+10;
+    return;
 }
 
 
@@ -20,8 +19,8 @@ int main(){
     int a,b;
     printf("Enter two numbers: ");
     scanf("%d %d",&a,&b);
-    int val = add(&a,&b);
-    int val2 = sum(a,b); // This is just to show that the function can be called multiple times with different arguments
-    printf("The sum of %d and %d is %d and %d \n",a,b,val,val2);
+    // add(&a,&b);
+    sum(a,b);
+    printf(" %d and %d \n",a,b);
     return 0;
 }
